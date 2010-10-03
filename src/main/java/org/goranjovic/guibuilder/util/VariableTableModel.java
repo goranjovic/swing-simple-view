@@ -9,7 +9,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class VariableTableModel extends DefaultTableModel {
 	
-	private List<List<Object>> rows = new ArrayList<List<Object>>();;
+	private List<List<Object>> rows = new ArrayList<List<Object>>();
 	private List<TableColumn> columns = new ArrayList<TableColumn>();
 	private JTable table;
 	
@@ -54,10 +54,12 @@ public class VariableTableModel extends DefaultTableModel {
         fireTableDataChanged();
     }
 	
-	public void addRow(List<Object> added){
-		rows.add(added);
+	public void addRow(List<Object> row){
+		rows.add(row);
 		fireTableDataChanged();
 	}
+	
+	
 	
 	public void addColumn(TableColumn column){
 		columns.add(column);
