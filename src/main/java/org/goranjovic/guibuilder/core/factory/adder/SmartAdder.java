@@ -27,6 +27,7 @@ import org.goranjovic.guibuilder.core.factory.adder.impl.MenuBarAdder;
 import org.goranjovic.guibuilder.core.factory.adder.impl.PopupMenuAdder;
 import org.goranjovic.guibuilder.core.factory.adder.impl.ScrollAdder;
 import org.goranjovic.guibuilder.core.factory.adder.impl.TabAdder;
+import org.goranjovic.guibuilder.core.factory.adder.impl.TableColumnAdder;
 
 public class SmartAdder implements Adder {
 
@@ -46,6 +47,10 @@ public class SmartAdder implements Adder {
 			}
 		}else if(tagName.equalsIgnoreCase("popup-menu")){
 			realAdder = new PopupMenuAdder();
+		}else if(tagName.equalsIgnoreCase("table-column")){
+			if(parent.getTagName().equalsIgnoreCase("table")){
+				realAdder = new TableColumnAdder();
+			}
 		}
 		
 		realAdder.add(parent, child);

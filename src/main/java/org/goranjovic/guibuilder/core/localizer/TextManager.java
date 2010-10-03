@@ -28,10 +28,15 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JRadioButton;
 import javax.swing.JTabbedPane;
+import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 
 import org.goranjovic.guibuilder.util.Tab;
+import org.goranjovic.guibuilder.util.TableColumn;
+import org.goranjovic.guibuilder.util.VariableTableModel;
 
 public class TextManager {
 	
@@ -81,6 +86,12 @@ public class TextManager {
 				int index = pane.indexOfComponent(component);
 				pane.setTitleAt(index, text);
 			}
+		}else if(name.equalsIgnoreCase("table-column")){
+			TableColumn tableColumn = (TableColumn)component;
+			tableColumn.setText(text);
+			JTable table = tableColumn.getParent();
+			VariableTableModel model = (VariableTableModel) table.getModel();
+			model.refreshColumnHeaders();			
 		}
 		
 	}
@@ -126,6 +137,9 @@ public class TextManager {
 		}
 		else if(name.equalsIgnoreCase("tab")){
 			return ((Tab)component).getTitle();
+		}
+		else if(name.equalsIgnoreCase("table-column")){
+			return ((TableColumn)component).getText();
 		}
 		return null;
 	}

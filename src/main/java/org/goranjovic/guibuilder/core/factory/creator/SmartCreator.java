@@ -38,6 +38,7 @@ import org.goranjovic.guibuilder.core.factory.creator.impl.RadioButtonCreator;
 import org.goranjovic.guibuilder.core.factory.creator.impl.ScrollCreator;
 import org.goranjovic.guibuilder.core.factory.creator.impl.TabCreator;
 import org.goranjovic.guibuilder.core.factory.creator.impl.TabbedPanelCreator;
+import org.goranjovic.guibuilder.core.factory.creator.impl.TableColumnCreator;
 import org.goranjovic.guibuilder.core.factory.creator.impl.TableCreator;
 import org.goranjovic.guibuilder.core.factory.creator.impl.TextAreaCreator;
 import org.goranjovic.guibuilder.core.factory.creator.impl.TextFieldCreator;
@@ -117,6 +118,8 @@ public class SmartCreator implements Creator {
 		}
 		else if(tagName.equalsIgnoreCase("tab")){
 			realCreator = new TabCreator();
+		}else if(tagName.equalsIgnoreCase("table-column")){
+			realCreator = new TableColumnCreator();
 		}
 		//add nullpointer exception checking
 		//for unsupported element 
