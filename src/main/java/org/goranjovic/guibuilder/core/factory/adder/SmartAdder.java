@@ -22,6 +22,7 @@ import javax.swing.JMenuBar;
 
 import org.goranjovic.guibuilder.core.ElementDescription;
 import org.goranjovic.guibuilder.core.factory.adder.Adder;
+import org.goranjovic.guibuilder.core.factory.adder.impl.CellEditorAdder;
 import org.goranjovic.guibuilder.core.factory.adder.impl.DefaultAdder;
 import org.goranjovic.guibuilder.core.factory.adder.impl.MenuBarAdder;
 import org.goranjovic.guibuilder.core.factory.adder.impl.PopupMenuAdder;
@@ -47,9 +48,15 @@ public class SmartAdder implements Adder {
 			}
 		}else if(tagName.equalsIgnoreCase("popup-menu")){
 			realAdder = new PopupMenuAdder();
-		}else if(tagName.equalsIgnoreCase("table-column")){
-			if(parent.getTagName().equalsIgnoreCase("table")){
+		}else if(parent.getTagName().equalsIgnoreCase("table")){
+			if(tagName.equalsIgnoreCase("table-column")){
 				realAdder = new TableColumnAdder();
+			}
+		}else if(parent.getTagName().equalsIgnoreCase("table-column")){
+			if(tagName.equalsIgnoreCase("textfield")
+		       || tagName.equalsIgnoreCase("checkbox")
+		       || tagName.equalsIgnoreCase("combo")){
+				realAdder = new CellEditorAdder();
 			}
 		}
 		

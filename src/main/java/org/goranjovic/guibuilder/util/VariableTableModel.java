@@ -4,14 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 public class VariableTableModel extends DefaultTableModel {
 	
 	private List<List<Object>> rows = new ArrayList<List<Object>>();;
 	private List<TableColumn> columns = new ArrayList<TableColumn>();
+	private JTable table;
 	
-	
+	public VariableTableModel(JTable table){
+		this.table = table;
+	}
+
 	@Override
     public int getColumnCount() {
         return columns.size();
@@ -28,6 +33,11 @@ public class VariableTableModel extends DefaultTableModel {
     @Override
     public Object getValueAt(int row, int column) {
           return rows.get(row).get(column);
+    }
+    
+    @Override
+    public void setValueAt(Object value, int row, int column) {
+    	rows.get(row).set(column, value);
     }
 
     public List<List<Object>> getRows() {
@@ -56,6 +66,14 @@ public class VariableTableModel extends DefaultTableModel {
 
 	public void refreshColumnHeaders() {
 		setColumnIdentifiers(new Vector<TableColumn>(columns));
+		for(TableColumn column : columns){
+			if(column.getCellEditor() != null){
+				int index = this.getColumns().indexOf(column);
+				javax.swing.table.TableColumn swingColumn = 
+					table.getColumnModel().getColumn(index);
+				swingColumn.setCellEditor(column.getCellEditor());
+			}
+		}
 	}
 	
 	

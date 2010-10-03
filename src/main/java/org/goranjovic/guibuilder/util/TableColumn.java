@@ -1,15 +1,23 @@
 package org.goranjovic.guibuilder.util;
 
-import java.awt.Component;
+import java.awt.Container;
 
 import javax.swing.JTable;
+import javax.swing.table.TableCellEditor;
                          //fake component
-public class TableColumn extends Component{
+public class TableColumn extends Container{
 	
 	private String name;
 	private String text;
 	private JTable parent;
+	private TableCellEditor cellEditor = null;
 	
+	public TableCellEditor getCellEditor() {
+		return cellEditor;
+	}
+	public void setCellEditor(TableCellEditor cellEditor) {
+		this.cellEditor = cellEditor;
+	}
 	@Override
 	public JTable getParent() {
 		return parent;
@@ -33,6 +41,20 @@ public class TableColumn extends Component{
 	@Override
 	public String toString() {
 		return name;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(! (obj instanceof TableColumn)){
+			return false;
+		}
+		TableColumn other = (TableColumn) obj;
+		return getName().equals(other.getName());
+	}
+	
+	@Override
+	public int hashCode() {
+		return getName().hashCode();
 	}
 
 }

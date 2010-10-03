@@ -19,7 +19,7 @@ public class TableColumnAdder implements Adder {
 		if(usedModel instanceof VariableTableModel){
 			model = (VariableTableModel) usedModel;
 		}else{
-			model = new VariableTableModel();
+			model = new VariableTableModel(table);
 			table.setModel(model);
 		}
 		
