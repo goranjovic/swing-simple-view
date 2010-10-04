@@ -27,7 +27,7 @@ import javax.swing.border.Border;
 
 import org.goranjovic.css.dom.StyleSheet;
 import org.goranjovic.guibuilder.core.ElementDescription;
-import org.goranjovic.guibuilder.core.style.helpers.ColorParser;
+import org.goranjovic.guibuilder.core.style.parsers.ColorParser;
 
 public class BorderStylist implements Stylist {
 	

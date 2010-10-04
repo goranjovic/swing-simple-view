@@ -36,8 +36,8 @@ import javax.swing.JLabel;
 
 import org.goranjovic.css.dom.StyleSheet;
 import org.goranjovic.guibuilder.core.ElementDescription;
-import org.goranjovic.guibuilder.core.style.helpers.ColorParser;
-import org.goranjovic.guibuilder.core.style.helpers.UrlParser;
+import org.goranjovic.guibuilder.core.style.parsers.ColorParser;
+import org.goranjovic.guibuilder.core.style.parsers.UrlParser;
 
 public class BackgroundStylist implements Stylist {
 

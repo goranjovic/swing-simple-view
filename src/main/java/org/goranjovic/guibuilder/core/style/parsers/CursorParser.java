@@ -1,4 +1,4 @@
-package org.goranjovic.guibuilder.core.style.helpers;
+package org.goranjovic.guibuilder.core.style.parsers;
 
 import java.awt.Cursor;
 import java.awt.Image;

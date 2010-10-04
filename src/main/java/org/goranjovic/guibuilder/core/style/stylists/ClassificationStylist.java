@@ -30,8 +30,8 @@ import javax.swing.ImageIcon;
 
 import org.goranjovic.css.dom.StyleSheet;
 import org.goranjovic.guibuilder.core.ElementDescription;
-import org.goranjovic.guibuilder.core.style.helpers.CursorParser;
-import org.goranjovic.guibuilder.core.style.helpers.UrlParser;
+import org.goranjovic.guibuilder.core.style.parsers.CursorParser;
+import org.goranjovic.guibuilder.core.style.parsers.UrlParser;
 
 public class ClassificationStylist implements Stylist {
 	
