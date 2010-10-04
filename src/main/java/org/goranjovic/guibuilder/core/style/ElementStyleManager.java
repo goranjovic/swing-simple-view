@@ -56,7 +56,7 @@ public class ElementStyleManager {
 		
 		
 		
-		for(Stylist stylist : stylists){
+		for(Stylist stylist : updatable){
 			if(description.getTagName().equalsIgnoreCase("form")) break; //fix
 			stylist.applyStyle(description, style);
 		}
