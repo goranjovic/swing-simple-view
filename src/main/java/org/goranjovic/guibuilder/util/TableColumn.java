@@ -7,6 +7,8 @@ import javax.swing.table.TableCellEditor;
                          //fake component
 public class TableColumn extends Container{
 	
+	private static final long serialVersionUID = 1492456619097492058L;
+	
 	private String name;
 	private String text;
 	private JTable parent;

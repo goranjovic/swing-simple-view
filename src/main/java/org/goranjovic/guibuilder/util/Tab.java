@@ -22,6 +22,7 @@ import javax.swing.JPanel;
 
 public class Tab extends JPanel {
 	
+	private static final long serialVersionUID = -2910830786228775190L;
 	private String title;
 
 	public String getTitle() {

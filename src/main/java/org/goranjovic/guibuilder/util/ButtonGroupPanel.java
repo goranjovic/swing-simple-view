@@ -26,6 +26,8 @@ import javax.swing.JRadioButton;
 
 public class ButtonGroupPanel extends JPanel{
 	
+	private static final long serialVersionUID = -5194519759694830446L;
+	
 	private ButtonGroup buttonGroup = new ButtonGroup();
 	
 	@Override
