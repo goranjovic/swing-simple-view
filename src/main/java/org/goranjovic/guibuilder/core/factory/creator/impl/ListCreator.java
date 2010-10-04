@@ -20,7 +20,6 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 
 import java.awt.Component;
 
-import javax.swing.JComboBox;
 import javax.swing.JList;
 
 import org.goranjovic.guibuilder.core.factory.creator.Creator;

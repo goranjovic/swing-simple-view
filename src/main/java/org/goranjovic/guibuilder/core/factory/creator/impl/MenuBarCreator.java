@@ -19,7 +19,6 @@ along with SwingGuiBuilder.  If not, see <http://www.gnu.org/licenses/>.*/
 package org.goranjovic.guibuilder.core.factory.creator.impl;
 
 import java.awt.Component;
-import java.awt.ComponentOrientation;
 
 import javax.swing.JMenuBar;
 

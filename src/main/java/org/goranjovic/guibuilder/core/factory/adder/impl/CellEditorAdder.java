@@ -5,15 +5,11 @@ import java.awt.Component;
 import javax.swing.DefaultCellEditor;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
-import javax.swing.JTable;
 import javax.swing.JTextField;
-
-
 
 import org.goranjovic.guibuilder.core.ElementDescription;
 import org.goranjovic.guibuilder.core.factory.adder.Adder;
 import org.goranjovic.guibuilder.util.TableColumn;
-import org.goranjovic.guibuilder.util.VariableTableModel;
 
 public class CellEditorAdder implements Adder {
 

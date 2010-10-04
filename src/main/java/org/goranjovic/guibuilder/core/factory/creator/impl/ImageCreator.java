@@ -21,7 +21,6 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 import java.awt.Component;
 
 import javax.swing.JLabel;
-import javax.swing.JMenuItem;
 
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
 import org.w3c.dom.Element;

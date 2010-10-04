@@ -20,18 +20,10 @@ package org.goranjovic.guibuilder.core.style.stylists;
 
 import java.awt.Component;
 import java.awt.Cursor;
-import java.awt.Image;
-import java.awt.Point;
-import java.awt.Toolkit;
-import java.net.URI;
-import java.net.URL;
-
-import javax.swing.ImageIcon;
 
 import org.goranjovic.css.dom.StyleSheet;
 import org.goranjovic.guibuilder.core.ElementDescription;
 import org.goranjovic.guibuilder.core.style.parsers.CursorParser;
-import org.goranjovic.guibuilder.core.style.parsers.UrlParser;
 
 public class ClassificationStylist implements Stylist {
 	

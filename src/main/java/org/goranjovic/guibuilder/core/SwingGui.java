@@ -23,14 +23,12 @@ import java.awt.Component;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 
 import org.goranjovic.css.dom.StyleSheet;
 import org.goranjovic.css.parser.Parser;
@@ -39,7 +37,6 @@ import org.goranjovic.guibuilder.core.localizer.Localizer;
 import org.goranjovic.guibuilder.core.style.ElementStyleManager;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.xml.sax.SAXException;
 
 public class SwingGui {
 	

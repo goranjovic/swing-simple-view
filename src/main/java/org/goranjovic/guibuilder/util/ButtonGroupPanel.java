@@ -20,7 +20,6 @@ package org.goranjovic.guibuilder.util;
 
 import java.awt.Component;
 
-import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;

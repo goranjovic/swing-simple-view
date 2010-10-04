@@ -19,7 +19,6 @@ along with SwingGuiBuilder.  If not, see <http://www.gnu.org/licenses/>.*/
 package org.goranjovic.guibuilder.core.style.stylists;
 
 import java.awt.Color;
-import java.awt.Component;
 
 import javax.swing.BorderFactory;
 import javax.swing.JComponent;

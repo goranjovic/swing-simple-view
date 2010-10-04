@@ -30,9 +30,6 @@ import javax.swing.JRadioButton;
 import javax.swing.JTabbedPane;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
 
 import org.goranjovic.guibuilder.util.Tab;
 import org.goranjovic.guibuilder.util.TableColumn;

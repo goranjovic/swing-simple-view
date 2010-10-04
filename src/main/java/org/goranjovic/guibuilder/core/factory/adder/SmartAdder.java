@@ -18,10 +18,7 @@ along with SwingGuiBuilder.  If not, see <http://www.gnu.org/licenses/>.*/
 
 package org.goranjovic.guibuilder.core.factory.adder;
 
-import javax.swing.JMenuBar;
-
 import org.goranjovic.guibuilder.core.ElementDescription;
-import org.goranjovic.guibuilder.core.factory.adder.Adder;
 import org.goranjovic.guibuilder.core.factory.adder.impl.CellEditorAdder;
 import org.goranjovic.guibuilder.core.factory.adder.impl.DefaultAdder;
 import org.goranjovic.guibuilder.core.factory.adder.impl.MenuBarAdder;
