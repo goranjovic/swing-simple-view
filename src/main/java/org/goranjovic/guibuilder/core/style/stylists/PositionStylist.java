@@ -156,7 +156,6 @@ public class PositionStylist implements Stylist{
 		int zIndex = 0;
 		if(zIndexString!=null){
 			zIndex =  Integer.parseInt(zIndexString);
-			zIndex =  zIndex;
 		}
 		if (component.getParent()!=null) {
 			component.getParent().setComponentZOrder(component, zIndex);
