@@ -25,8 +25,6 @@ import org.goranjovic.guibuilder.core.ElementDescription;
 
 public class Localizer {
 	
-	private TextManager textApplier = new TextManager();
-	
 	public void localize(ElementDescription description, Properties locale){
 		
 		
@@ -37,7 +35,7 @@ public class Localizer {
 		String localizedText = locale.getProperty(id);
 		
 		if(localizedText!=null){
-			textApplier.setText(component, name, localizedText);
+			TextManager.setText(component, name, localizedText);
 		}
 		
 		

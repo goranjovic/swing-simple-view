@@ -122,8 +122,7 @@ public class TextStylist implements Stylist {
 	}
 	
 	private void applyTextTransform(JComponent component, String textTransform, String tagName){
-		TextManager manager = new TextManager();
-		String text = manager.getText(component, tagName);
+		String text = TextManager.getText(component, tagName);
 		if (textTransform.equalsIgnoreCase("uppercase")) {
 			text = text.toUpperCase();
 		} else if (textTransform.equalsIgnoreCase("lowercase")) {
@@ -141,7 +140,7 @@ public class TextStylist implements Stylist {
 			text = sb.toString();
 
 		}
-		manager.setText(component, tagName, text);
+		TextManager.setText(component, tagName, text);
 	}
 	private Font createOrGetFont(Component component) {
 		Font font = component.getFont();

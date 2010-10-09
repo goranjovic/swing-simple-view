@@ -37,53 +37,53 @@ import org.goranjovic.guibuilder.util.VariableTableModel;
 
 public class TextManager {
 	
-	public void setText(Component component, String name, String text){
+	public static void setText(Component component, String type, String text){
 		
-		if (name.equalsIgnoreCase("button")) {
+		if (type.equalsIgnoreCase("button")) {
 			JButton button = ((JButton)component);
 			button.setText(text);
 		}
-		else if (name.equalsIgnoreCase("panel")){
+		else if (type.equalsIgnoreCase("panel")){
 		}
-		else if (name.equalsIgnoreCase("radio")){
+		else if (type.equalsIgnoreCase("radio")){
 			((JRadioButton)component).setText(text);
 		}
-		else if (name.equalsIgnoreCase("checkbox")){
+		else if (type.equalsIgnoreCase("checkbox")){
 			((JCheckBox)component).setText(text);
 		}
-		else if(name.equalsIgnoreCase("group")){
+		else if(type.equalsIgnoreCase("group")){
 		}
-		else if (name.equalsIgnoreCase("label")){
+		else if (type.equalsIgnoreCase("label")){
 			((JLabel)component).setText(text);
 		}
-		else if(name.equalsIgnoreCase("textarea")){
+		else if(type.equalsIgnoreCase("textarea")){
 		}
-		else if(name.equalsIgnoreCase("list")){
+		else if(type.equalsIgnoreCase("list")){
 		}
-		else if(name.equalsIgnoreCase("combo")){
+		else if(type.equalsIgnoreCase("combo")){
 		}
-		else if(name.equalsIgnoreCase("table")){
+		else if(type.equalsIgnoreCase("table")){
 		}
-		else if(name.equalsIgnoreCase("form")){
+		else if(type.equalsIgnoreCase("form")){
 			((JFrame)component).setTitle(text);
 		}
-		else if(name.equalsIgnoreCase("menu")){
+		else if(type.equalsIgnoreCase("menu")){
 			((JMenu)component).setText(text);
 		}
-		else if(name.equalsIgnoreCase("menu-item")){
+		else if(type.equalsIgnoreCase("menu-item")){
 			((JMenuItem)component).setText(text);
 		}
-		else if(name.equalsIgnoreCase("icon")){
+		else if(type.equalsIgnoreCase("icon")){
 			((JButton)component).setToolTipText(text);
 		}
-		else if(name.equalsIgnoreCase("tab")){
+		else if(type.equalsIgnoreCase("tab")){
 			((Tab)component).setTitle(text);
 			if(JTabbedPane.class.isAssignableFrom(component.getParent().getClass())){
 				JTabbedPane pane = (JTabbedPane)component.getParent();
 				int index = pane.indexOfComponent(component);
 				pane.setTitleAt(index, text);
 			}
-		}else if(name.equalsIgnoreCase("table-column")){
+		}else if(type.equalsIgnoreCase("table-column")){
 			TableColumn tableColumn = (TableColumn)component;
 			tableColumn.setText(text);
 			JTable table = tableColumn.getParent();
@@ -93,7 +93,7 @@ public class TextManager {
 		
 	}
 	
-	public String getText(Component component, String name){
+	public static String getText(Component component, String name){
 		if (name.equalsIgnoreCase("button")) {
 			JButton button = ((JButton)component);
 			return button.getText();
