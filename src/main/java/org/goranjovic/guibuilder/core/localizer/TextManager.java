@@ -93,49 +93,49 @@ public class TextManager {
 		
 	}
 	
-	public static String getText(Component component, String name){
-		if (name.equalsIgnoreCase("button")) {
+	public static String getText(Component component, String type){
+		if (type.equalsIgnoreCase("button")) {
 			JButton button = ((JButton)component);
 			return button.getText();
 		}
-		else if (name.equalsIgnoreCase("panel")){
+		else if (type.equalsIgnoreCase("panel")){
 		}
-		else if (name.equalsIgnoreCase("radio")){
+		else if (type.equalsIgnoreCase("radio")){
 			return ((JRadioButton)component).getText();
 		}
-		else if (name.equalsIgnoreCase("checkbox")){
+		else if (type.equalsIgnoreCase("checkbox")){
 			return ((JCheckBox)component).getText();
 		}
-		else if(name.equalsIgnoreCase("group")){
+		else if(type.equalsIgnoreCase("group")){
 		}
-		else if (name.equalsIgnoreCase("label")){
+		else if (type.equalsIgnoreCase("label")){
 			return ((JLabel)component).getText();
 		}
-		else if(name.equalsIgnoreCase("textarea")){
+		else if(type.equalsIgnoreCase("textarea")){
 			return ((JTextArea)component).getText();
 		}
-		else if(name.equalsIgnoreCase("list")){
+		else if(type.equalsIgnoreCase("list")){
 		}
-		else if(name.equalsIgnoreCase("combo")){
+		else if(type.equalsIgnoreCase("combo")){
 		}
-		else if(name.equalsIgnoreCase("table")){
+		else if(type.equalsIgnoreCase("table")){
 		}
-		else if(name.equalsIgnoreCase("form")){
+		else if(type.equalsIgnoreCase("form")){
 			return ((JFrame)component).getTitle();
 		}
-		else if(name.equalsIgnoreCase("menu")){
+		else if(type.equalsIgnoreCase("menu")){
 			return ((JMenu)component).getText();
 		}
-		else if(name.equalsIgnoreCase("menu-item")){
+		else if(type.equalsIgnoreCase("menu-item")){
 			return ((JMenuItem)component).getText();
 		}
-		else if(name.equalsIgnoreCase("icon")){
+		else if(type.equalsIgnoreCase("icon")){
 			return ((JButton)component).getToolTipText();
 		}
-		else if(name.equalsIgnoreCase("tab")){
+		else if(type.equalsIgnoreCase("tab")){
 			return ((Tab)component).getTitle();
 		}
-		else if(name.equalsIgnoreCase("table-column")){
+		else if(type.equalsIgnoreCase("table-column")){
 			return ((TableColumn)component).getText();
 		}
 		return null;
