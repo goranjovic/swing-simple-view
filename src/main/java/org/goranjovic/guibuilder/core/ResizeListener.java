@@ -23,9 +23,9 @@ import java.awt.event.ComponentListener;
 
 public class ResizeListener extends Thread implements ComponentListener {
 	
-	private SwingGui gui;
+	private SwingView gui;
 	
-	public ResizeListener(SwingGui gui){
+	public ResizeListener(SwingView gui){
 		this.gui=gui;
 		start();
 	}

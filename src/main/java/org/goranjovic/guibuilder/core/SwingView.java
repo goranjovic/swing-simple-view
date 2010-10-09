@@ -38,7 +38,7 @@ import org.goranjovic.guibuilder.core.style.ElementStyleManager;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-public class SwingGui {
+public class SwingView {
 	
 	private FormFactory elementFactory = new FormFactory();
 	private ElementStyleManager elementStylist = new ElementStyleManager();
@@ -124,7 +124,7 @@ public class SwingGui {
 		setLocale(file);		
 	}
 
-	public SwingGui() {
+	public SwingView() {
 		
 	}
 	

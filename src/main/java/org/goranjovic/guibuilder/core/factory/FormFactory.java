@@ -25,7 +25,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import org.goranjovic.guibuilder.core.ElementDescription;
-import org.goranjovic.guibuilder.core.SwingGui;
+import org.goranjovic.guibuilder.core.SwingView;
 import org.goranjovic.guibuilder.core.factory.adder.Adder;
 import org.goranjovic.guibuilder.core.factory.adder.SmartAdder;
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
@@ -38,7 +38,7 @@ public class FormFactory {
 
 	
 
-	public ElementDescription createMainForm(Element root, SwingGui swingGui) {
+	public ElementDescription createMainForm(Element root, SwingView swingView) {
 		
 		
 		
@@ -50,7 +50,7 @@ public class FormFactory {
 		rootDesc.setId(root.getAttribute("id"));
 		rootDesc.setTagName("form");
 		
-		swingGui.addComponentToMap(root.getAttribute("id"), rootDesc);
+		swingView.addComponentToMap(root.getAttribute("id"), rootDesc);
 		frame.setName(root.getAttribute("id"));
 		frame.setTitle(root.getAttribute("id"));
 		frame.setSize(537, 288);
@@ -66,7 +66,7 @@ public class FormFactory {
 			if (children.item(i).getNodeType() == Node.ELEMENT_NODE) {
 				Element child = (Element) children.item(i);
 				//System.out.println(child.getAttribute("id"));
-				createComponent(child, panel,rootDesc, swingGui);
+				createComponent(child, panel,rootDesc, swingView);
 			}
 		}
 
@@ -75,7 +75,7 @@ public class FormFactory {
 	}
 
 	private void createComponent(Element element, Container parent, ElementDescription parentDesc,
-			SwingGui swingGui) {
+			SwingView swingGui) {
 		Component component = null;
 		String id = element.getAttribute("id");
 		String tagName = element.getTagName();
