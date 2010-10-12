@@ -51,5 +51,17 @@ public class ButtonGroupPanel extends JPanel{
 	public void setButtonGroup(ButtonGroup buttonGroup) {
 		this.buttonGroup = buttonGroup;
 	}
+	
+	public JRadioButton getSelectedRadioButton(){
+		for(Component child : getComponents()){
+			if(JRadioButton.class.isAssignableFrom(child.getClass())){
+				JRadioButton radio = (JRadioButton)child;
+				if(radio.isSelected()){
+					return radio;
+				}
+			}
+		}
+		return null;
+	}
 
 }
