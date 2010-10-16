@@ -71,15 +71,20 @@ public class SButtonGroupPanel extends JPanel  implements SComponent  {
 		}
 		this.selectedRadioButton = selected;
 		if(selected.getRadioModel()!=null){
-			//setValue(selected.getRadioModel());
 			pcs.firePropertyChange("selected", oldValue, selected.getRadioModel());
 		}
 	}
 
 	@Override
 	public void setValue(Object value) {
-	
-		
+		for(SRadio radio : radios){
+			if(radio.getRadioModel().equals(value)){
+				if(!radio.isSelected()){
+					radio.setSelected(true);
+					return;
+				}
+			}
+		}
 	}
 
 	@Override
