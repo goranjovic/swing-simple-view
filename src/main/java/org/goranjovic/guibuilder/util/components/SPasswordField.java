@@ -2,7 +2,7 @@ package org.goranjovic.guibuilder.util.components;
 
 import javax.swing.JPasswordField;
 
-public class SPasswordField extends JPasswordField  implements ValueHolder {
+public class SPasswordField extends JPasswordField  implements ValueHolder, TextHolder  {
 
 	private static final long serialVersionUID = 7211699326720591523L;
 

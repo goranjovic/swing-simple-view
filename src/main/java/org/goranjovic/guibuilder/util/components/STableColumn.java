@@ -22,8 +22,10 @@ import java.awt.Container;
 
 import javax.swing.JTable;
 import javax.swing.table.TableCellEditor;
+
+import org.goranjovic.guibuilder.util.VariableTableModel;
                          //fake component
-public class STableColumn extends Container  implements ValueHolder {
+public class STableColumn extends Container  implements ValueHolder, TextHolder  {
 	
 	private static final long serialVersionUID = 1492456619097492058L;
 	
@@ -50,6 +52,9 @@ public class STableColumn extends Container  implements ValueHolder {
 	}
 	public void setText(String text) {
 		this.text = text;
+		JTable table = this.getParent();
+		VariableTableModel model = (VariableTableModel) table.getModel();
+		model.refreshColumnHeaders();		
 	}
 	public String getName() {
 		return name;

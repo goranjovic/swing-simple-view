@@ -24,7 +24,7 @@ import javax.swing.ButtonGroup;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
-public class SButtonGroupPanel extends JPanel  implements ValueHolder {
+public class SButtonGroupPanel extends JPanel  implements ValueHolder, TextHolder  {
 	
 	private static final long serialVersionUID = -5194519759694830446L;
 	
@@ -72,6 +72,18 @@ public class SButtonGroupPanel extends JPanel  implements ValueHolder {
 
 	@Override
 	public Object getValue() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setText(String text) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String getText() {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -21,7 +21,6 @@ package org.goranjovic.guibuilder.core.factory;
 import java.awt.Component;
 import java.awt.Container;
 
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import org.goranjovic.guibuilder.core.ElementDescription;
@@ -30,6 +29,7 @@ import org.goranjovic.guibuilder.core.factory.adder.Adder;
 import org.goranjovic.guibuilder.core.factory.adder.SmartAdder;
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
 import org.goranjovic.guibuilder.core.factory.creator.SmartCreator;
+import org.goranjovic.guibuilder.util.components.SFrame;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -42,7 +42,7 @@ public class FormFactory {
 		
 		
 		
-		JFrame frame = new JFrame();
+		SFrame frame = new SFrame();
 		
 		
 		ElementDescription rootDesc = new ElementDescription();
@@ -54,7 +54,7 @@ public class FormFactory {
 		frame.setName(root.getAttribute("id"));
 		frame.setTitle(root.getAttribute("id"));
 		frame.setSize(537, 288);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(SFrame.EXIT_ON_CLOSE);
 		JPanel panel = new JPanel();
 		panel.setBounds(frame.getBounds());
 		//panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));

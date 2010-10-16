@@ -19,8 +19,9 @@ along with swing-simple-view.  If not, see <http://www.gnu.org/licenses/>.*/
 package org.goranjovic.guibuilder.util.components;
 
 import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
 
-public class STab extends JPanel  implements ValueHolder {
+public class STab extends JPanel  implements ValueHolder, TextHolder  {
 	
 	private static final long serialVersionUID = -2910830786228775190L;
 	private String title;
@@ -43,6 +44,21 @@ public class STab extends JPanel  implements ValueHolder {
 	public Object getValue() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public void setText(String text) {
+		setTitle(text);
+		if(JTabbedPane.class.isAssignableFrom(this.getParent().getClass())){
+			JTabbedPane pane = (JTabbedPane)this.getParent();
+			int index = pane.indexOfComponent(this);
+			pane.setTitleAt(index, text);
+		}
+	}
+
+	@Override
+	public String getText() {
+		return getTitle();
 	}
 	
 	

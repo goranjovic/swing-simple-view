@@ -2,7 +2,7 @@ package org.goranjovic.guibuilder.util.components;
 
 import javax.swing.JList;
 
-public class SList extends JList  implements ValueHolder {
+public class SList extends JList  implements ValueHolder, TextHolder  {
 
 	private static final long serialVersionUID = 5826275160527349679L;
 
@@ -14,6 +14,18 @@ public class SList extends JList  implements ValueHolder {
 
 	@Override
 	public Object getValue() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setText(String text) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String getText() {
 		// TODO Auto-generated method stub
 		return null;
 	}

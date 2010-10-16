@@ -2,7 +2,7 @@ package org.goranjovic.guibuilder.util.components;
 
 import javax.swing.JMenu;
 
-public class SMenu extends JMenu  implements ValueHolder {
+public class SMenu extends JMenu  implements ValueHolder, TextHolder  {
 
 	private static final long serialVersionUID = 2643093057753440720L;
 

@@ -2,7 +2,7 @@ package org.goranjovic.guibuilder.util.components;
 
 import javax.swing.JCheckBox;
 
-public class SCheckBox extends JCheckBox  implements ValueHolder {
+public class SCheckBox extends JCheckBox  implements ValueHolder, TextHolder  {
 
 	private static final long serialVersionUID = -8870247184874383966L;
 

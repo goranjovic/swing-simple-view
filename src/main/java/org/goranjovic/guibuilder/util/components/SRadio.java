@@ -2,7 +2,7 @@ package org.goranjovic.guibuilder.util.components;
 
 import javax.swing.JRadioButton;
 
-public class SRadio extends JRadioButton  implements ValueHolder {
+public class SRadio extends JRadioButton  implements ValueHolder, TextHolder  {
 
 	private static final long serialVersionUID = 2454445679599858562L;
 	
