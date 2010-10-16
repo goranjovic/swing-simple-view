@@ -13,10 +13,22 @@ public class SComboBox extends JComboBox  implements SComponent  {
 
 	@Override
 	public void setValue(Object value) {
-		Object oldValue = getValue();
-		setSelectedItem(value);		
-		pcs.firePropertyChange("selectedItem", oldValue, value);
+		setSelectedItem(value);
 	}
+	
+	@Override
+	public void setSelectedItem(Object anObject) {
+		Object oldValue = getSelectedItem();
+		super.setSelectedItem(anObject);
+		pcs.firePropertyChange("selectedItem", oldValue, anObject);
+	}
+	
+	/*@Override
+	public void setSelectedIndex(int anIndex) {
+		Object oldValue = getSelectedItem();
+		super.setSelectedIndex(anIndex);
+		pcs.firePropertyChange("selectedItem", oldValue, getSelectedItem());
+	}*/
 
 	@Override
 	public Object getValue() {

@@ -15,6 +15,7 @@ public class SRadio extends JRadioButton  implements SComponent  {
 
 	@Override
 	public void setValue(Object value) {
+		//to-do: coordination with group
 		Object oldValue = getValue();
 		this.value = value;	
 		pcs.firePropertyChange("selected", oldValue, value);

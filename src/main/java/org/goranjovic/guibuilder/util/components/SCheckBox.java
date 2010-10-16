@@ -12,9 +12,14 @@ public class SCheckBox extends JCheckBox  implements SComponent  {
 
 	@Override
 	public void setValue(Object value) {
-		Object oldValue = getValue();
 		setSelected((Boolean)value);
-		pcs.firePropertyChange("selected", oldValue, value);
+	}
+	
+	@Override
+	public void setSelected(boolean b) {
+		Object oldValue = isSelected();
+		super.setSelected(b);
+		pcs.firePropertyChange("selected", oldValue, b);
 	}
 
 	@Override
