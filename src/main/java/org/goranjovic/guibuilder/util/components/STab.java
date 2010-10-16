@@ -21,7 +21,7 @@ package org.goranjovic.guibuilder.util.components;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
-public class STab extends JPanel  implements ValueHolder, TextHolder  {
+public class STab extends JPanel  implements SComponent  {
 	
 	private static final long serialVersionUID = -2910830786228775190L;
 	private String title;

@@ -25,7 +25,7 @@ import javax.swing.table.TableCellEditor;
 
 import org.goranjovic.guibuilder.util.VariableTableModel;
                          //fake component
-public class STableColumn extends Container  implements ValueHolder, TextHolder  {
+public class STableColumn extends Container  implements SComponent  {
 	
 	private static final long serialVersionUID = 1492456619097492058L;
 	

@@ -2,7 +2,7 @@ package org.goranjovic.guibuilder.util.components;
 
 import javax.swing.JTable;
 
-public class STable extends JTable  implements ValueHolder, TextHolder  {
+public class STable extends JTable  implements SComponent  {
 
 	private static final long serialVersionUID = -2070518856883972014L;
 

@@ -2,7 +2,7 @@ package org.goranjovic.guibuilder.util.components;
 
 import javax.swing.JPanel;
 
-public class SImage extends JPanel  implements ValueHolder, TextHolder  {
+public class SImage extends JPanel  implements SComponent  {
 
 	private static final long serialVersionUID = 8577445597253910333L;
 

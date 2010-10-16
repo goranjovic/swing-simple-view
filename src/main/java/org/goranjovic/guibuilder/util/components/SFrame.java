@@ -2,7 +2,7 @@ package org.goranjovic.guibuilder.util.components;
 
 import javax.swing.JFrame;
 
-public class SFrame extends JFrame implements ValueHolder, TextHolder {
+public class SFrame extends JFrame implements SComponent {
 
 	private static final long serialVersionUID = -1525659124885966957L;
 

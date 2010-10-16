@@ -2,7 +2,7 @@ package org.goranjovic.guibuilder.util.components;
 
 import javax.swing.JScrollPane;
 
-public class SScroll extends JScrollPane  implements ValueHolder, TextHolder  {
+public class SScroll extends JScrollPane  implements SComponent  {
 
 	private static final long serialVersionUID = 178122365033886015L;
 

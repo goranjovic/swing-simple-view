@@ -2,7 +2,7 @@ package org.goranjovic.guibuilder.util.components;
 
 import javax.swing.JPanel;
 
-public class SPanel extends JPanel  implements ValueHolder, TextHolder  {
+public class SPanel extends JPanel  implements SComponent  {
 
 	private static final long serialVersionUID = 6122809146849656141L;
 

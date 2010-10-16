@@ -2,7 +2,7 @@ package org.goranjovic.guibuilder.util.components;
 
 import javax.swing.JMenuBar;
 
-public class SMenuBar extends JMenuBar  implements ValueHolder, TextHolder  {
+public class SMenuBar extends JMenuBar  implements SComponent  {
 
 	private static final long serialVersionUID = -1110027714357320883L;
 

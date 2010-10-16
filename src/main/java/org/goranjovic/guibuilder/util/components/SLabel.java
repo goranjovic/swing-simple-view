@@ -2,7 +2,7 @@ package org.goranjovic.guibuilder.util.components;
 
 import javax.swing.JLabel;
 
-public class SLabel extends JLabel  implements ValueHolder, TextHolder  {
+public class SLabel extends JLabel  implements SComponent  {
 
 	private static final long serialVersionUID = -8661552040159416302L;
 

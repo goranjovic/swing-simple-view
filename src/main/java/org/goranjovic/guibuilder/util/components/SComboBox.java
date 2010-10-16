@@ -2,7 +2,7 @@ package org.goranjovic.guibuilder.util.components;
 
 import javax.swing.JComboBox;
 
-public class SComboBox extends JComboBox  implements ValueHolder, TextHolder  {
+public class SComboBox extends JComboBox  implements SComponent  {
 
 	private static final long serialVersionUID = -2822113052757277494L;
 

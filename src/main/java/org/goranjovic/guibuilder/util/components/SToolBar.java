@@ -2,7 +2,7 @@ package org.goranjovic.guibuilder.util.components;
 
 import javax.swing.JToolBar;
 
-public class SToolBar extends JToolBar  implements ValueHolder, TextHolder  {
+public class SToolBar extends JToolBar  implements SComponent  {
 
 	private static final long serialVersionUID = 1632261048829023376L;
 

@@ -24,7 +24,7 @@ import javax.swing.ButtonGroup;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
-public class SButtonGroupPanel extends JPanel  implements ValueHolder, TextHolder  {
+public class SButtonGroupPanel extends JPanel  implements SComponent  {
 	
 	private static final long serialVersionUID = -5194519759694830446L;
 	

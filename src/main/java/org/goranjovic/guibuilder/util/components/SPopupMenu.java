@@ -2,7 +2,7 @@ package org.goranjovic.guibuilder.util.components;
 
 import javax.swing.JPopupMenu;
 
-public class SPopupMenu extends JPopupMenu  implements ValueHolder, TextHolder  {
+public class SPopupMenu extends JPopupMenu  implements SComponent  {
 
 	private static final long serialVersionUID = -5245033923222801214L;
 

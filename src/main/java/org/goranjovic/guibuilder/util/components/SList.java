@@ -2,7 +2,7 @@ package org.goranjovic.guibuilder.util.components;
 
 import javax.swing.JList;
 
-public class SList extends JList  implements ValueHolder, TextHolder  {
+public class SList extends JList  implements SComponent  {
 
 	private static final long serialVersionUID = 5826275160527349679L;
 

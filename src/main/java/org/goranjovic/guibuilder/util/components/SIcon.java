@@ -2,7 +2,7 @@ package org.goranjovic.guibuilder.util.components;
 
 import javax.swing.JButton;
 
-public class SIcon extends JButton  implements ValueHolder, TextHolder  {
+public class SIcon extends JButton  implements SComponent  {
 
 	private static final long serialVersionUID = 228366822804330898L;
 
