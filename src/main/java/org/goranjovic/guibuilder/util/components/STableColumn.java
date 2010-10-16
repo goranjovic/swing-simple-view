@@ -19,6 +19,7 @@ along with swing-simple-view.  If not, see <http://www.gnu.org/licenses/>.*/
 package org.goranjovic.guibuilder.util.components;
 
 import java.awt.Container;
+import java.beans.PropertyChangeSupport;
 
 import javax.swing.JTable;
 import javax.swing.table.TableCellEditor;
@@ -88,6 +89,11 @@ public class STableColumn extends Container  implements SComponent  {
 	}
 	@Override
 	public Object getValue() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public PropertyChangeSupport retrievePropertyChangeSupport() {
 		// TODO Auto-generated method stub
 		return null;
 	}

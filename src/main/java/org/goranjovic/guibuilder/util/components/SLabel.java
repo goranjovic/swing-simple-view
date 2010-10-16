@@ -1,5 +1,7 @@
 package org.goranjovic.guibuilder.util.components;
 
+import java.beans.PropertyChangeSupport;
+
 import javax.swing.JLabel;
 
 public class SLabel extends JLabel  implements SComponent  {
@@ -14,6 +16,12 @@ public class SLabel extends JLabel  implements SComponent  {
 
 	@Override
 	public Object getValue() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PropertyChangeSupport retrievePropertyChangeSupport() {
 		// TODO Auto-generated method stub
 		return null;
 	}

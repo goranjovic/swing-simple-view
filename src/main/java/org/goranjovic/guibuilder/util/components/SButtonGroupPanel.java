@@ -19,6 +19,7 @@ along with swing-simple-view.  If not, see <http://www.gnu.org/licenses/>.*/
 package org.goranjovic.guibuilder.util.components;
 
 import java.awt.Component;
+import java.beans.PropertyChangeSupport;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JPanel;
@@ -84,6 +85,12 @@ public class SButtonGroupPanel extends JPanel  implements SComponent  {
 
 	@Override
 	public String getText() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PropertyChangeSupport retrievePropertyChangeSupport() {
 		// TODO Auto-generated method stub
 		return null;
 	}

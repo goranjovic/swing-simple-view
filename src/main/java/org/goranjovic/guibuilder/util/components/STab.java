@@ -18,6 +18,8 @@ along with swing-simple-view.  If not, see <http://www.gnu.org/licenses/>.*/
 
 package org.goranjovic.guibuilder.util.components;
 
+import java.beans.PropertyChangeSupport;
+
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
@@ -59,6 +61,12 @@ public class STab extends JPanel  implements SComponent  {
 	@Override
 	public String getText() {
 		return getTitle();
+	}
+
+	@Override
+	public PropertyChangeSupport retrievePropertyChangeSupport() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	

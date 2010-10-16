@@ -1,5 +1,7 @@
 package org.goranjovic.guibuilder.util.components;
 
+import java.beans.PropertyChangeSupport;
+
 import javax.swing.JList;
 
 public class SList extends JList  implements SComponent  {
@@ -26,6 +28,12 @@ public class SList extends JList  implements SComponent  {
 
 	@Override
 	public String getText() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PropertyChangeSupport retrievePropertyChangeSupport() {
 		// TODO Auto-generated method stub
 		return null;
 	}
