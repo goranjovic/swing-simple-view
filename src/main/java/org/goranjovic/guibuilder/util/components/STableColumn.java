@@ -54,8 +54,10 @@ public class STableColumn extends Container  implements SComponent  {
 	public void setText(String text) {
 		this.text = text;
 		JTable table = this.getParent();
-		VariableTableModel model = (VariableTableModel) table.getModel();
-		model.refreshColumnHeaders();		
+		if(table!=null){
+			VariableTableModel model = (VariableTableModel) table.getModel();
+			model.refreshColumnHeaders();
+		}
 	}
 	public String getName() {
 		return name;
