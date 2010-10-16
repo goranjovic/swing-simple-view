@@ -20,22 +20,29 @@ package org.goranjovic.guibuilder.util.components;
 
 import java.awt.Component;
 import java.beans.PropertyChangeSupport;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JPanel;
-import javax.swing.JRadioButton;
 
 public class SButtonGroupPanel extends JPanel  implements SComponent  {
 	
 	private static final long serialVersionUID = -5194519759694830446L;
 	
+	private PropertyChangeSupport pcs = new PropertyChangeSupport(this);
+	
 	private ButtonGroup buttonGroup = new ButtonGroup();
+	private List<SRadio> radios = new ArrayList<SRadio>();
+	
+	private SRadio selectedRadioButton = null;
 	
 	@Override
 	public Component add(Component comp) {
-			if (JRadioButton.class.isAssignableFrom(comp.getClass())) {
-				JRadioButton button = (JRadioButton) comp;
-				buttonGroup.add(button);
+			if (SRadio.class.isAssignableFrom(comp.getClass())) {
+				SRadio radio = (SRadio) comp;
+				buttonGroup.add(radio);
+				radios.add(radio);
 			}
 			return super.add(comp);
 	}
@@ -53,28 +60,31 @@ public class SButtonGroupPanel extends JPanel  implements SComponent  {
 		this.buttonGroup = buttonGroup;
 	}
 	
-	public JRadioButton getSelectedRadioButton(){
-		for(Component child : getComponents()){
-			if(JRadioButton.class.isAssignableFrom(child.getClass())){
-				JRadioButton radio = (JRadioButton)child;
-				if(radio.isSelected()){
-					return radio;
-				}
-			}
+	public SRadio getSelectedRadioButton(){
+		return selectedRadioButton;
+	}
+	
+	public void setSelectedRadioButton(SRadio selected){
+		Object oldValue = null;
+		if(this.selectedRadioButton != null){
+			oldValue = this.selectedRadioButton.getRadioModel();
 		}
-		return null;
+		this.selectedRadioButton = selected;
+		if(selected.getRadioModel()!=null){
+			//setValue(selected.getRadioModel());
+			pcs.firePropertyChange("selected", oldValue, selected.getRadioModel());
+		}
 	}
 
 	@Override
 	public void setValue(Object value) {
-		// TODO Auto-generated method stub
+	
 		
 	}
 
 	@Override
 	public Object getValue() {
-		// TODO Auto-generated method stub
-		return null;
+		return getSelectedRadioButton().getRadioModel();
 	}
 
 	@Override
@@ -91,8 +101,7 @@ public class SButtonGroupPanel extends JPanel  implements SComponent  {
 
 	@Override
 	public PropertyChangeSupport retrievePropertyChangeSupport() {
-		// TODO Auto-generated method stub
-		return null;
+		return pcs;
 	}
 
 }
