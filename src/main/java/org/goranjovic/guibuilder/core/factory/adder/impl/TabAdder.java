@@ -22,7 +22,7 @@ import javax.swing.JTabbedPane;
 
 import org.goranjovic.guibuilder.core.ElementDescription;
 import org.goranjovic.guibuilder.core.factory.adder.Adder;
-import org.goranjovic.guibuilder.util.Tab;
+import org.goranjovic.guibuilder.util.components.STab;
 
 public class TabAdder implements Adder {
 
@@ -30,7 +30,7 @@ public class TabAdder implements Adder {
 	public void add(ElementDescription parent, ElementDescription child) {
 		
 		JTabbedPane container = (JTabbedPane) parent.getComponent();
-		Tab component = (Tab) child.getComponent();
+		STab component = (STab) child.getComponent();
 		
 		container.addTab(component.getTitle(), component);
 

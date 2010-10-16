@@ -20,16 +20,15 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 
 import java.awt.Component;
 
-import javax.swing.JPasswordField;
-
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
+import org.goranjovic.guibuilder.util.components.SPasswordField;
 import org.w3c.dom.Element;
 
 public class PasswordFieldCreator implements Creator {
 
 	@Override
 	public Component create(Element element) {
-		JPasswordField password = new JPasswordField();
+		SPasswordField password = new SPasswordField();
 		password.setName(element.getAttribute("id"));
 		return password;
 	}

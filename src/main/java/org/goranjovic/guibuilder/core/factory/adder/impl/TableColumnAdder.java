@@ -23,8 +23,8 @@ import javax.swing.table.TableModel;
 
 import org.goranjovic.guibuilder.core.ElementDescription;
 import org.goranjovic.guibuilder.core.factory.adder.Adder;
-import org.goranjovic.guibuilder.util.TableColumn;
 import org.goranjovic.guibuilder.util.VariableTableModel;
+import org.goranjovic.guibuilder.util.components.STableColumn;
 
 public class TableColumnAdder implements Adder {
 
@@ -41,7 +41,7 @@ public class TableColumnAdder implements Adder {
 			table.setModel(model);
 		}
 		
-		TableColumn column = (TableColumn) child.getComponent();
+		STableColumn column = (STableColumn) child.getComponent();
 		model.addColumn(column);
 		column.setParent(table);
 

@@ -27,14 +27,14 @@ import javax.swing.JTextField;
 
 import org.goranjovic.guibuilder.core.ElementDescription;
 import org.goranjovic.guibuilder.core.factory.adder.Adder;
-import org.goranjovic.guibuilder.util.TableColumn;
+import org.goranjovic.guibuilder.util.components.STableColumn;
 
 public class CellEditorAdder implements Adder {
 
 	@Override
 	public void add(ElementDescription parent, ElementDescription child) {
 		
-		TableColumn column = (TableColumn) parent.getComponent();
+		STableColumn column = (STableColumn) parent.getComponent();
 		Component editor = child.getComponent();
 		
 		column.add(editor);

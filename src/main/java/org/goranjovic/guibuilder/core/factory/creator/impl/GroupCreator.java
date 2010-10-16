@@ -21,14 +21,14 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 import java.awt.Component;
 
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
-import org.goranjovic.guibuilder.util.ButtonGroupPanel;
+import org.goranjovic.guibuilder.util.components.SButtonGroupPanel;
 import org.w3c.dom.Element;
 
 public class GroupCreator implements Creator {
 
 	@Override
 	public Component create(Element element) {
-		ButtonGroupPanel group = new ButtonGroupPanel();
+		SButtonGroupPanel group = new SButtonGroupPanel();
 		group.setLayout(null);
 		group.setName(element.getAttribute("id"));
 		return group;

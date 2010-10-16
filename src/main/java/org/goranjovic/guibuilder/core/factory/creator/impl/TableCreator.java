@@ -20,16 +20,15 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 
 import java.awt.Component;
 
-import javax.swing.JTable;
-
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
+import org.goranjovic.guibuilder.util.components.STable;
 import org.w3c.dom.Element;
 
 public class TableCreator implements Creator {
 
 	@Override
 	public Component create(Element element) {
-		JTable table = new JTable();
+		STable table = new STable();
 		table.setName(element.getAttribute("id"));
 		return table;
 	}

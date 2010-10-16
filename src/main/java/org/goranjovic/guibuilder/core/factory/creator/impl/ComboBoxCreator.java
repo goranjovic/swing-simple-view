@@ -20,16 +20,16 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 
 import java.awt.Component;
 
-import javax.swing.JComboBox;
 
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
+import org.goranjovic.guibuilder.util.components.SComboBox;
 import org.w3c.dom.Element;
 
 public class ComboBoxCreator implements Creator {
 
 	@Override
 	public Component create(Element element) {
-		JComboBox list = new JComboBox();
+		SComboBox list = new SComboBox();
 		list.setName(element.getAttribute("id"));
 		list.setEditable(false);
 		return list;

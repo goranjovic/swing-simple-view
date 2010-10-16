@@ -21,14 +21,14 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 import java.awt.Component;
 
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
-import org.goranjovic.guibuilder.util.TableColumn;
+import org.goranjovic.guibuilder.util.components.STableColumn;
 import org.w3c.dom.Element;
 
 public class TableColumnCreator implements Creator {
 
 	@Override
 	public Component create(Element element) {
-		TableColumn column = new TableColumn();
+		STableColumn column = new STableColumn();
 		column.setName(element.getAttribute("id"));
 		column.setText(element.getAttribute("id"));
 		return column;

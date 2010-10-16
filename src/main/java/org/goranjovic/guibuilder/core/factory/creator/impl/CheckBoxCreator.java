@@ -20,16 +20,16 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 
 import java.awt.Component;
 
-import javax.swing.JCheckBox;
 
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
+import org.goranjovic.guibuilder.util.components.SCheckBox;
 import org.w3c.dom.Element;
 
 public class CheckBoxCreator implements Creator {
 
 	@Override
 	public Component create(Element element) {
-		JCheckBox checkBox = new JCheckBox();
+		SCheckBox checkBox = new SCheckBox();
 		checkBox.setName(element.getAttribute("id"));
 		checkBox.setText(element.getAttribute("id"));
 		return checkBox;

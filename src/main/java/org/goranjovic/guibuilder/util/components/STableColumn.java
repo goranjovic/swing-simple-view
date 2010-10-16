@@ -16,14 +16,14 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the Lesser GNU General Public License
 along with swing-simple-view.  If not, see <http://www.gnu.org/licenses/>.*/
 
-package org.goranjovic.guibuilder.util;
+package org.goranjovic.guibuilder.util.components;
 
 import java.awt.Container;
 
 import javax.swing.JTable;
 import javax.swing.table.TableCellEditor;
                          //fake component
-public class TableColumn extends Container{
+public class STableColumn extends Container  implements ValueHolder {
 	
 	private static final long serialVersionUID = 1492456619097492058L;
 	
@@ -65,16 +65,26 @@ public class TableColumn extends Container{
 	
 	@Override
 	public boolean equals(Object obj) {
-		if(! (obj instanceof TableColumn)){
+		if(! (obj instanceof STableColumn)){
 			return false;
 		}
-		TableColumn other = (TableColumn) obj;
+		STableColumn other = (STableColumn) obj;
 		return getName().equals(other.getName());
 	}
 	
 	@Override
 	public int hashCode() {
 		return getName().hashCode();
+	}
+	@Override
+	public void setValue(Object value) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public Object getValue() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

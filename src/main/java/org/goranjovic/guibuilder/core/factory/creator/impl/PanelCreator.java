@@ -20,16 +20,15 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 
 import java.awt.Component;
 
-import javax.swing.JPanel;
-
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
+import org.goranjovic.guibuilder.util.components.SPanel;
 import org.w3c.dom.Element;
 
 public class PanelCreator implements Creator {
 
 	@Override
 	public Component create(Element element) {
-		JPanel panel = new JPanel();
+		SPanel panel = new SPanel();
 		panel.setLayout(null);
 		panel.setName(element.getAttribute("id"));
 		return panel;

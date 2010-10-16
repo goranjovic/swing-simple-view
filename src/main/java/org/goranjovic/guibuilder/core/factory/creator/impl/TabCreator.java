@@ -21,14 +21,14 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 import java.awt.Component;
 
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
-import org.goranjovic.guibuilder.util.Tab;
+import org.goranjovic.guibuilder.util.components.STab;
 import org.w3c.dom.Element;
 
 public class TabCreator implements Creator {
 
 	@Override
 	public Component create(Element element) {
-		Tab tab = new Tab();
+		STab tab = new STab();
 		tab.setName(element.getAttribute("id"));
 		tab.setTitle(element.getAttribute("id"));
 		tab.setLayout(null);

@@ -20,16 +20,15 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 
 import java.awt.Component;
 
-import javax.swing.JTextArea;
-
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
+import org.goranjovic.guibuilder.util.components.STextArea;
 import org.w3c.dom.Element;
 
 public class TextAreaCreator implements Creator {
 
 	@Override
 	public Component create(Element element) {
-		JTextArea textArea = new JTextArea();
+		STextArea textArea = new STextArea();
 		textArea.setName(element.getAttribute("id"));
 		return textArea;
 	}

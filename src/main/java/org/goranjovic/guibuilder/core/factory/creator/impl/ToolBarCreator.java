@@ -20,16 +20,15 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 
 import java.awt.Component;
 
-import javax.swing.JToolBar;
-
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
+import org.goranjovic.guibuilder.util.components.SToolBar;
 import org.w3c.dom.Element;
 
 public class ToolBarCreator implements Creator {
 
 	@Override
 	public Component create(Element element) {
-		JToolBar toolbar = new JToolBar();
+		SToolBar toolbar = new SToolBar();
 		toolbar.setName(element.getAttribute("id"));
 		return toolbar;
 	}

@@ -20,16 +20,15 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 
 import java.awt.Component;
 
-import javax.swing.JMenu;
-
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
+import org.goranjovic.guibuilder.util.components.SMenu;
 import org.w3c.dom.Element;
 
 public class MenuCreator implements Creator {
 
 	@Override
 	public Component create(Element element) {
-		JMenu menu = new JMenu(); 
+		SMenu menu = new SMenu(); 
 		menu.setName(element.getAttribute("id"));
 		menu.setText(element.getAttribute("id"));
 		return menu;

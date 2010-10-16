@@ -20,16 +20,15 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 
 import java.awt.Component;
 
-import javax.swing.JButton;
-
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
+import org.goranjovic.guibuilder.util.components.SButton;
 import org.w3c.dom.Element;
 
 public class ButtonCreator implements Creator {
 
 	@Override
 	public Component create(Element element) {
-		JButton button = new JButton();
+		SButton button = new SButton();
 		button.setName(element.getAttribute("id"));
 		button.setText(element.getAttribute("id"));
 		return button;

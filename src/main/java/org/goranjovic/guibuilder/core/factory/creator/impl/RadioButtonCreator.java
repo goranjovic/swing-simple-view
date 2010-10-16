@@ -20,16 +20,15 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 
 import java.awt.Component;
 
-import javax.swing.JRadioButton;
-
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
+import org.goranjovic.guibuilder.util.components.SRadio;
 import org.w3c.dom.Element;
 
 public class RadioButtonCreator implements Creator {
 
 	@Override
 	public Component create(Element element) {
-		JRadioButton radio = new JRadioButton();
+		SRadio radio = new SRadio();
 		radio.setName(element.getAttribute("id"));
 		radio.setText(element.getAttribute("id"));
 		return radio;

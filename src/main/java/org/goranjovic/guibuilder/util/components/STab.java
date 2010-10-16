@@ -16,11 +16,11 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the Lesser GNU General Public License
 along with swing-simple-view.  If not, see <http://www.gnu.org/licenses/>.*/
 
-package org.goranjovic.guibuilder.util;
+package org.goranjovic.guibuilder.util.components;
 
 import javax.swing.JPanel;
 
-public class Tab extends JPanel {
+public class STab extends JPanel  implements ValueHolder {
 	
 	private static final long serialVersionUID = -2910830786228775190L;
 	private String title;
@@ -31,6 +31,18 @@ public class Tab extends JPanel {
 
 	public void setTitle(String title) {
 		this.title = title;
+	}
+
+	@Override
+	public void setValue(Object value) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Object getValue() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	

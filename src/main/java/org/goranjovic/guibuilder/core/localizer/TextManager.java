@@ -31,9 +31,9 @@ import javax.swing.JTabbedPane;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
 
-import org.goranjovic.guibuilder.util.Tab;
-import org.goranjovic.guibuilder.util.TableColumn;
 import org.goranjovic.guibuilder.util.VariableTableModel;
+import org.goranjovic.guibuilder.util.components.STab;
+import org.goranjovic.guibuilder.util.components.STableColumn;
 
 public class TextManager {
 	
@@ -77,14 +77,14 @@ public class TextManager {
 			((JButton)component).setToolTipText(text);
 		}
 		else if(type.equalsIgnoreCase("tab")){
-			((Tab)component).setTitle(text);
+			((STab)component).setTitle(text);
 			if(JTabbedPane.class.isAssignableFrom(component.getParent().getClass())){
 				JTabbedPane pane = (JTabbedPane)component.getParent();
 				int index = pane.indexOfComponent(component);
 				pane.setTitleAt(index, text);
 			}
 		}else if(type.equalsIgnoreCase("table-column")){
-			TableColumn tableColumn = (TableColumn)component;
+			STableColumn tableColumn = (STableColumn)component;
 			tableColumn.setText(text);
 			JTable table = tableColumn.getParent();
 			VariableTableModel model = (VariableTableModel) table.getModel();
@@ -133,10 +133,10 @@ public class TextManager {
 			return ((JButton)component).getToolTipText();
 		}
 		else if(type.equalsIgnoreCase("tab")){
-			return ((Tab)component).getTitle();
+			return ((STab)component).getTitle();
 		}
 		else if(type.equalsIgnoreCase("table-column")){
-			return ((TableColumn)component).getText();
+			return ((STableColumn)component).getText();
 		}
 		return null;
 	}

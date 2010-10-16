@@ -20,16 +20,15 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 
 import java.awt.Component;
 
-import javax.swing.JScrollPane;
-
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
+import org.goranjovic.guibuilder.util.components.SScroll;
 import org.w3c.dom.Element;
 
 public class ScrollCreator implements Creator {
 
 	@Override
 	public Component create(Element element) {
-		JScrollPane scroll = new JScrollPane();
+		SScroll scroll = new SScroll();
 		scroll.setName(element.getAttribute("id"));
 		return scroll;
 	}

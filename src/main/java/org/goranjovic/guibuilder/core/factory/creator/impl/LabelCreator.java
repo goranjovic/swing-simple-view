@@ -20,16 +20,15 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 
 import java.awt.Component;
 
-import javax.swing.JLabel;
-
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
+import org.goranjovic.guibuilder.util.components.SLabel;
 import org.w3c.dom.Element;
 
 public class LabelCreator implements Creator {
 
 	@Override
 	public Component create(Element element) {
-		JLabel label = new JLabel();
+		SLabel label = new SLabel();
 		label.setName(element.getAttribute("id"));
 		label.setText(element.getAttribute("id"));
 		return label;

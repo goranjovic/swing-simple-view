@@ -25,13 +25,15 @@ import java.util.Vector;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
+import org.goranjovic.guibuilder.util.components.STableColumn;
+
 public class VariableTableModel extends DefaultTableModel {
 	
 
 	private static final long serialVersionUID = -4861592506629156977L;
 	
 	private List<List<Object>> rows = new ArrayList<List<Object>>();
-	private List<TableColumn> columns = new ArrayList<TableColumn>();
+	private List<STableColumn> columns = new ArrayList<STableColumn>();
 	private JTable table;
 	
 	public VariableTableModel(JTable table){
@@ -65,7 +67,7 @@ public class VariableTableModel extends DefaultTableModel {
 		return rows;
 	}
 
-	public List<TableColumn> getColumns() {
+	public List<STableColumn> getColumns() {
 		return columns;
 	}
 
@@ -82,14 +84,14 @@ public class VariableTableModel extends DefaultTableModel {
 	
 	
 	
-	public void addColumn(TableColumn column){
+	public void addColumn(STableColumn column){
 		columns.add(column);
 		refreshColumnHeaders();
 	}
 
 	public void refreshColumnHeaders() {
-		setColumnIdentifiers(new Vector<TableColumn>(columns));
-		for(TableColumn column : columns){
+		setColumnIdentifiers(new Vector<STableColumn>(columns));
+		for(STableColumn column : columns){
 			if(column.getCellEditor() != null){
 				int index = this.getColumns().indexOf(column);
 				javax.swing.table.TableColumn swingColumn = 

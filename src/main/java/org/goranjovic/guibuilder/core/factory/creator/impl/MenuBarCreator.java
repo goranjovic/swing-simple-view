@@ -20,16 +20,15 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 
 import java.awt.Component;
 
-import javax.swing.JMenuBar;
-
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
+import org.goranjovic.guibuilder.util.components.SMenuBar;
 import org.w3c.dom.Element;
 
 public class MenuBarCreator implements Creator {
 
 	@Override
 	public Component create(Element element) {
-		JMenuBar menuBar = new JMenuBar();
+		SMenuBar menuBar = new SMenuBar();
 		menuBar.setName(element.getAttribute("id"));
 		
 		return menuBar;

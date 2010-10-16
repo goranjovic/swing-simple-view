@@ -20,16 +20,15 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 
 import java.awt.Component;
 
-import javax.swing.JPopupMenu;
-
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
+import org.goranjovic.guibuilder.util.components.SPopupMenu;
 import org.w3c.dom.Element;
 
 public class PopupMenuCreator implements Creator {
 
 	@Override
 	public Component create(Element element) {
-		JPopupMenu popup = new JPopupMenu();
+		SPopupMenu popup = new SPopupMenu();
 		popup.setName(element.getAttribute("id"));
 		return popup;
 	}

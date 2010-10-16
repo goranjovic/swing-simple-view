@@ -20,16 +20,15 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 
 import java.awt.Component;
 
-import javax.swing.JLabel;
-
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
+import org.goranjovic.guibuilder.util.components.SImage;
 import org.w3c.dom.Element;
 
 public class ImageCreator implements Creator {
 
 	@Override
 	public Component create(Element element) {
-		JLabel label = new JLabel();
+		SImage label = new SImage();
 		label.setName(element.getAttribute("id"));
 		return label;
 	}

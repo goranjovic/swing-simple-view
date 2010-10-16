@@ -20,16 +20,15 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 
 import java.awt.Component;
 
-import javax.swing.JList;
-
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
+import org.goranjovic.guibuilder.util.components.SList;
 import org.w3c.dom.Element;
 
 public class ListCreator implements Creator {
 
 	@Override
 	public Component create(Element element) {
-		JList list = new JList();
+		SList list = new SList();
 		list.setName(element.getAttribute("id"));
 		return list;
 	}

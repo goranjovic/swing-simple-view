@@ -16,7 +16,7 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the Lesser GNU General Public License
 along with swing-simple-view.  If not, see <http://www.gnu.org/licenses/>.*/
 
-package org.goranjovic.guibuilder.util;
+package org.goranjovic.guibuilder.util.components;
 
 import java.awt.Component;
 
@@ -24,7 +24,7 @@ import javax.swing.ButtonGroup;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
-public class ButtonGroupPanel extends JPanel{
+public class SButtonGroupPanel extends JPanel  implements ValueHolder {
 	
 	private static final long serialVersionUID = -5194519759694830446L;
 	
@@ -61,6 +61,18 @@ public class ButtonGroupPanel extends JPanel{
 				}
 			}
 		}
+		return null;
+	}
+
+	@Override
+	public void setValue(Object value) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Object getValue() {
+		// TODO Auto-generated method stub
 		return null;
 	}
 

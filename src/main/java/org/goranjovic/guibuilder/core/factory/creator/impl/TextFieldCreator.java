@@ -20,16 +20,15 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 
 import java.awt.Component;
 
-import javax.swing.JTextField;
-
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
+import org.goranjovic.guibuilder.util.components.STextField;
 import org.w3c.dom.Element;
 
 public class TextFieldCreator implements Creator {
 
 	@Override
 	public Component create(Element element) {
-		JTextField textField = new JTextField();
+		STextField textField = new STextField();
 		textField.setName(element.getAttribute("id"));
 		return textField;
 	}

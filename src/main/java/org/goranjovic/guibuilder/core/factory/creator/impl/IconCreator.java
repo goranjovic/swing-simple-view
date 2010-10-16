@@ -20,16 +20,15 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 
 import java.awt.Component;
 
-import javax.swing.JButton;
-
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
+import org.goranjovic.guibuilder.util.components.SIcon;
 import org.w3c.dom.Element;
 
 public class IconCreator implements Creator {
 
 	@Override
 	public Component create(Element element) {
-		JButton icon = new JButton();
+		SIcon icon = new SIcon();
 		icon.setName(element.getAttribute("id"));
 		icon.setToolTipText(element.getAttribute("id"));
 		return icon;
