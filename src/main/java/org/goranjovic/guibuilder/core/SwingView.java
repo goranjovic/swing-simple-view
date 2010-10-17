@@ -44,6 +44,24 @@ public class SwingView {
 	private ElementStyleManager elementStylist = new ElementStyleManager();
 	private Localizer localizer = new Localizer();
 	
+	private String currentLanguage = "";
+	private String languageFileName;
+	
+
+	public String getCurrentLanguage() {
+		return currentLanguage;
+	}
+
+	public void setCurrentLanguage(String currentLanguage) {
+		this.currentLanguage = currentLanguage;
+	}
+	
+	public void changeLanguage(String otherLanguage){
+		this.currentLanguage = otherLanguage;
+		setLocale(languageFileName);
+		localizer.localize(rootDesc, locale);
+	}
+
 
 	private ElementDescription rootDesc;
 	private boolean initialized = false;
@@ -120,6 +138,14 @@ public class SwingView {
 	}
 	
 	public void setLocale(String fileName){
+		languageFileName = fileName;
+		if(fileName.contains("{language}")){
+			if(!getCurrentLanguage().equals("")){
+				fileName = fileName.replaceAll("\\{language\\}", "_" + getCurrentLanguage());
+			}else{
+				fileName = fileName.replaceAll("\\{language\\}", "");
+			}
+		}
 		File file = new File(fileName);
 		setLocale(file);		
 	}
