@@ -140,11 +140,7 @@ public class SwingView {
 	public void setLocale(String fileName){
 		languageFileName = fileName;
 		if(fileName.contains("{language}")){
-			if(!getCurrentLanguage().equals("")){
-				fileName = fileName.replaceAll("\\{language\\}", "_" + getCurrentLanguage());
-			}else{
-				fileName = fileName.replaceAll("\\{language\\}", "");
-			}
+			fileName = fileName.replaceAll("\\{language\\}", getCurrentLanguage());
 		}
 		File file = new File(fileName);
 		setLocale(file);		
