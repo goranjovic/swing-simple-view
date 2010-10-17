@@ -21,8 +21,8 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 import java.awt.Component;
 
 
+import org.goranjovic.guibuilder.components.SComboBox;
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
-import org.goranjovic.guibuilder.util.components.SComboBox;
 import org.w3c.dom.Element;
 
 public class ComboBoxCreator implements Creator {

@@ -25,9 +25,9 @@ import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
 
+import org.goranjovic.guibuilder.components.STableColumn;
 import org.goranjovic.guibuilder.core.ElementDescription;
 import org.goranjovic.guibuilder.core.factory.adder.Adder;
-import org.goranjovic.guibuilder.util.components.STableColumn;
 
 public class CellEditorAdder implements Adder {
 

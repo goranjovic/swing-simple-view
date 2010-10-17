@@ -20,9 +20,9 @@ package org.goranjovic.guibuilder.core.factory.adder.impl;
 
 import javax.swing.JTabbedPane;
 
+import org.goranjovic.guibuilder.components.STab;
 import org.goranjovic.guibuilder.core.ElementDescription;
 import org.goranjovic.guibuilder.core.factory.adder.Adder;
-import org.goranjovic.guibuilder.util.components.STab;
 
 public class TabAdder implements Adder {
 

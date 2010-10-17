@@ -16,7 +16,7 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the Lesser GNU General Public License
 along with swing-simple-view.  If not, see <http://www.gnu.org/licenses/>.*/
 
-package org.goranjovic.guibuilder.util.components;
+package org.goranjovic.guibuilder.components;
 
 import java.awt.Container;
 import java.beans.PropertyChangeSupport;
@@ -24,7 +24,7 @@ import java.beans.PropertyChangeSupport;
 import javax.swing.JTable;
 import javax.swing.table.TableCellEditor;
 
-import org.goranjovic.guibuilder.util.VariableTableModel;
+import org.goranjovic.guibuilder.components.support.VariableTableModel;
                          //fake component
 public class STableColumn extends Container  implements SComponent  {
 	

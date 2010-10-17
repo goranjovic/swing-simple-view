@@ -16,7 +16,7 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the Lesser GNU General Public License
 along with swing-simple-view.  If not, see <http://www.gnu.org/licenses/>.*/
 
-package org.goranjovic.guibuilder.util;
+package org.goranjovic.guibuilder.components.support;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +25,7 @@ import java.util.Vector;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-import org.goranjovic.guibuilder.util.components.STableColumn;
+import org.goranjovic.guibuilder.components.STableColumn;
 
 public class VariableTableModel extends DefaultTableModel {
 	

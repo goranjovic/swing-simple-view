@@ -21,10 +21,10 @@ package org.goranjovic.guibuilder.core.factory.adder.impl;
 import javax.swing.JTable;
 import javax.swing.table.TableModel;
 
+import org.goranjovic.guibuilder.components.STableColumn;
+import org.goranjovic.guibuilder.components.support.VariableTableModel;
 import org.goranjovic.guibuilder.core.ElementDescription;
 import org.goranjovic.guibuilder.core.factory.adder.Adder;
-import org.goranjovic.guibuilder.util.VariableTableModel;
-import org.goranjovic.guibuilder.util.components.STableColumn;
 
 public class TableColumnAdder implements Adder {
 

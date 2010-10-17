@@ -1,12 +1,12 @@
-package org.goranjovic.guibuilder.util.components;
+package org.goranjovic.guibuilder.components;
 
 import java.beans.PropertyChangeSupport;
 
-import javax.swing.JPanel;
+import javax.swing.JToolBar;
 
-public class SPanel extends JPanel  implements SComponent  {
+public class SToolBar extends JToolBar  implements SComponent  {
 
-	private static final long serialVersionUID = 6122809146849656141L;
+	private static final long serialVersionUID = 1632261048829023376L;
 
 	@Override
 	public void setValue(Object value) {

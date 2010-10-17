@@ -20,8 +20,8 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 
 import java.awt.Component;
 
+import org.goranjovic.guibuilder.components.SMenuBar;
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
-import org.goranjovic.guibuilder.util.components.SMenuBar;
 import org.w3c.dom.Element;
 
 public class MenuBarCreator implements Creator {

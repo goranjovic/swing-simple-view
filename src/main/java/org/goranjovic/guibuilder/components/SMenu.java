@@ -1,12 +1,12 @@
-package org.goranjovic.guibuilder.util.components;
+package org.goranjovic.guibuilder.components;
 
 import java.beans.PropertyChangeSupport;
 
-import javax.swing.JButton;
+import javax.swing.JMenu;
 
-public class SIcon extends JButton  implements SComponent  {
+public class SMenu extends JMenu  implements SComponent  {
 
-	private static final long serialVersionUID = 228366822804330898L;
+	private static final long serialVersionUID = 2643093057753440720L;
 
 	@Override
 	public void setValue(Object value) {

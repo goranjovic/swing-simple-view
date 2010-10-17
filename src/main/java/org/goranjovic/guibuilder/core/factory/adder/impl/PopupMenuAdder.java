@@ -22,9 +22,9 @@ import java.awt.Container;
 
 import javax.swing.JPopupMenu;
 
+import org.goranjovic.guibuilder.components.support.PopupMenuListener;
 import org.goranjovic.guibuilder.core.ElementDescription;
 import org.goranjovic.guibuilder.core.factory.adder.Adder;
-import org.goranjovic.guibuilder.util.PopupMenuListener;
 
 public class PopupMenuAdder implements Adder {
 

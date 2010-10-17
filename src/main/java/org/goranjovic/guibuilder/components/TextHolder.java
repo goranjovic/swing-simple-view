@@ -1,4 +1,4 @@
-package org.goranjovic.guibuilder.util.components;
+package org.goranjovic.guibuilder.components;
 
 public interface TextHolder {
 	

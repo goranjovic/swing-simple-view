@@ -20,8 +20,8 @@ package org.goranjovic.guibuilder.core.factory.creator.impl;
 
 import java.awt.Component;
 
+import org.goranjovic.guibuilder.components.SImage;
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
-import org.goranjovic.guibuilder.util.components.SImage;
 import org.w3c.dom.Element;
 
 public class ImageCreator implements Creator {

@@ -20,7 +20,7 @@ package org.goranjovic.guibuilder.core.localizer;
 
 import java.awt.Component;
 
-import org.goranjovic.guibuilder.util.components.TextHolder;
+import org.goranjovic.guibuilder.components.TextHolder;
 
 public class TextManager {
 	

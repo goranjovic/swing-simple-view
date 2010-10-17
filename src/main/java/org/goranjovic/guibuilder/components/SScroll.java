@@ -1,12 +1,12 @@
-package org.goranjovic.guibuilder.util.components;
+package org.goranjovic.guibuilder.components;
 
 import java.beans.PropertyChangeSupport;
 
-import javax.swing.JTable;
+import javax.swing.JScrollPane;
 
-public class STable extends JTable  implements SComponent  {
+public class SScroll extends JScrollPane  implements SComponent  {
 
-	private static final long serialVersionUID = -2070518856883972014L;
+	private static final long serialVersionUID = 178122365033886015L;
 
 	@Override
 	public void setValue(Object value) {

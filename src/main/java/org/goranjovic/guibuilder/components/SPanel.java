@@ -1,12 +1,12 @@
-package org.goranjovic.guibuilder.util.components;
+package org.goranjovic.guibuilder.components;
 
 import java.beans.PropertyChangeSupport;
 
-import javax.swing.JMenuBar;
+import javax.swing.JPanel;
 
-public class SMenuBar extends JMenuBar  implements SComponent  {
+public class SPanel extends JPanel  implements SComponent  {
 
-	private static final long serialVersionUID = -1110027714357320883L;
+	private static final long serialVersionUID = 6122809146849656141L;
 
 	@Override
 	public void setValue(Object value) {

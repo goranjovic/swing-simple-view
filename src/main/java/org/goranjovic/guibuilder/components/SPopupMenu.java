@@ -1,12 +1,12 @@
-package org.goranjovic.guibuilder.util.components;
+package org.goranjovic.guibuilder.components;
 
 import java.beans.PropertyChangeSupport;
 
-import javax.swing.JTabbedPane;
+import javax.swing.JPopupMenu;
 
-public class STabbedPanel extends JTabbedPane  implements SComponent  {
+public class SPopupMenu extends JPopupMenu  implements SComponent  {
 
-	private static final long serialVersionUID = -4077780955986656208L;
+	private static final long serialVersionUID = -5245033923222801214L;
 
 	@Override
 	public void setValue(Object value) {

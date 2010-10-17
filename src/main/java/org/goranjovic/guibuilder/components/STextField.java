@@ -1,30 +1,30 @@
-package org.goranjovic.guibuilder.util.components;
+package org.goranjovic.guibuilder.components;
 
 import java.beans.PropertyChangeSupport;
 
-import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.Document;
 
-public class STextArea extends JTextArea  implements SComponent, DocumentListener    {
 
-	private static final long serialVersionUID = 5830242451524418294L;
+public class STextField extends JTextField  implements SComponent, DocumentListener  {
+
+	private static final long serialVersionUID = -590619363471482477L;
 	
 	private PropertyChangeSupport pcs = new PropertyChangeSupport(this);
 	
 	private String oldValue;
 
-
-	public STextArea(){
+	public STextField(){
 		super();
 		getDocument().addDocumentListener(this);
 	}
-	
+
 	@Override
 	public void setValue(Object value) {
-		setText(value.toString());		
+		setText(value.toString());
 	}
 	
 	@Override
@@ -33,6 +33,8 @@ public class STextArea extends JTextArea  implements SComponent, DocumentListene
 		super.setText(t);
 		pcs.firePropertyChange("text", oldValue, t);
 	}
+	
+	
 
 	@Override
 	public Object getValue() {
@@ -43,10 +45,11 @@ public class STextArea extends JTextArea  implements SComponent, DocumentListene
 	public PropertyChangeSupport retrievePropertyChangeSupport() {
 		return pcs;
 	}
-	
+
+
 	private void handleDocumentChange(DocumentEvent event) {
 		 Document source = event.getDocument();
-       String text;
+        String text;
 		try {
 			text = source.getText(0, source.getLength());
 		} catch (BadLocationException   e) {
@@ -58,12 +61,16 @@ public class STextArea extends JTextArea  implements SComponent, DocumentListene
 
 	public void changedUpdate(DocumentEvent documentEvent) {
 		handleDocumentChange(documentEvent);
-   }
-   public void insertUpdate(DocumentEvent documentEvent) {
-   	handleDocumentChange(documentEvent);
-   }
-   public void removeUpdate(DocumentEvent documentEvent) {
-   	handleDocumentChange(documentEvent);
-   }
+    }
+    public void insertUpdate(DocumentEvent documentEvent) {
+    	handleDocumentChange(documentEvent);
+    }
+    public void removeUpdate(DocumentEvent documentEvent) {
+    	handleDocumentChange(documentEvent);
+    }
+
+    
+
+
 
 }

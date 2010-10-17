@@ -1,12 +1,12 @@
-package org.goranjovic.guibuilder.util.components;
+package org.goranjovic.guibuilder.components;
 
 import java.beans.PropertyChangeSupport;
 
-import javax.swing.JLabel;
+import javax.swing.JButton;
 
-public class SLabel extends JLabel  implements SComponent  {
+public class SIcon extends JButton  implements SComponent  {
 
-	private static final long serialVersionUID = -8661552040159416302L;
+	private static final long serialVersionUID = 228366822804330898L;
 
 	@Override
 	public void setValue(Object value) {

@@ -23,13 +23,13 @@ import java.awt.Container;
 
 import javax.swing.JPanel;
 
+import org.goranjovic.guibuilder.components.SFrame;
 import org.goranjovic.guibuilder.core.ElementDescription;
 import org.goranjovic.guibuilder.core.SwingView;
 import org.goranjovic.guibuilder.core.factory.adder.Adder;
 import org.goranjovic.guibuilder.core.factory.adder.SmartAdder;
 import org.goranjovic.guibuilder.core.factory.creator.Creator;
 import org.goranjovic.guibuilder.core.factory.creator.SmartCreator;
-import org.goranjovic.guibuilder.util.components.SFrame;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;

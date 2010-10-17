@@ -1,12 +1,12 @@
-package org.goranjovic.guibuilder.util.components;
+package org.goranjovic.guibuilder.components;
 
 import java.beans.PropertyChangeSupport;
 
-import javax.swing.JList;
+import javax.swing.JPanel;
 
-public class SList extends JList  implements SComponent  {
+public class SImage extends JPanel  implements SComponent  {
 
-	private static final long serialVersionUID = 5826275160527349679L;
+	private static final long serialVersionUID = 8577445597253910333L;
 
 	@Override
 	public void setValue(Object value) {
