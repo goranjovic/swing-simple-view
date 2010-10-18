@@ -27,7 +27,6 @@ import java.awt.Toolkit;
 import javax.swing.JScrollPane;
 import javax.swing.JViewport;
 
-import org.goranjovic.css.dom.SelectorType;
 import org.goranjovic.css.dom.StyleSheet;
 import org.goranjovic.guibuilder.core.ElementDescription;
 
@@ -35,15 +34,14 @@ public class PositionStylist implements Stylist{
 
 	@Override
 	public void applyStyle(ElementDescription description, StyleSheet style) {
-		applyCoordinates(description, style, SelectorType.TAG);
-		applyCoordinates(description,style, SelectorType.ID);
+		applyCoordinates(description, style);
 		
 	}
 
 
 
 
-	public void applyCoordinates(ElementDescription description, StyleSheet style, SelectorType selectorType){
+	public void applyCoordinates(ElementDescription description, StyleSheet style){
 		String leftString;
 		String rightString;
 		String topString;
@@ -52,15 +50,15 @@ public class PositionStylist implements Stylist{
 		String overflowString;
 		
 		Component component = description.getComponent();
-		
-			String identifier = description.getIdentifier(selectorType);
+		String id = description.getId();
+		String tagName = description.getTagName();
 			
-			leftString = style.findValue(identifier, "left", selectorType);
-			rightString = style.findValue(identifier, "right", selectorType);
-			topString = style.findValue(identifier, "top", selectorType);
-			bottomString = style.findValue(identifier, "bottom", selectorType);
-			zIndexString = style.findValue(identifier, "z-index", selectorType);
-			overflowString = style.findValue(identifier, "overflow", selectorType);
+		leftString = style.findValue(id, tagName, "left");
+		rightString = style.findValue(id, tagName, "right");
+		topString = style.findValue(id, tagName, "top");
+		bottomString = style.findValue(id, tagName, "bottom");
+		zIndexString = style.findValue(id, tagName, "z-index");
+		overflowString = style.findValue(id, tagName, "overflow");
 		
 		//System.out.println(description.getId());
 		int parentWidth;

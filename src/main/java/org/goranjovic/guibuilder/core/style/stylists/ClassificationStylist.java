@@ -36,10 +36,9 @@ public class ClassificationStylist implements Stylist {
 		String id = description.getId();
 		String tagName = description.getTagName();
 		
-		if(style.findValueForId(id, "cursor")!=null){
-			applyCursor(component, style.findValueForId(id, "cursor"));
-		}else if(style.findValueForTag(tagName, "cursor")!=null){
-			applyCursor(component, style.findValueForTag(tagName, "cursor"));
+		String cursorName = style.findValue(id, tagName, "cursor");
+		if(cursorName!=null){
+			applyCursor(component, cursorName);
 		}
 
 	}

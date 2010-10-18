@@ -46,16 +46,14 @@ public class BackgroundStylist implements Stylist {
 		String id = description.getId();
 		String tagName = description.getTagName();
 		
-		if(style.findValueForId(id, "background-color")!=null){
-			applyBackgroundColor(component, style.findValueForId(id, "background-color"));
-		}else if(style.findValueForTag(tagName, "background-color")!=null){
-			applyBackgroundColor(component, style.findValueForTag(tagName, "background-color"));
+		String backgroundColor = style.findValue(id, tagName, "background-color");
+		if(backgroundColor!=null){
+			applyBackgroundColor(component, backgroundColor);
 		}
 		
-		if(style.findValueForId(id, "background-image")!=null){
-			applyBackgroundImage(description, style.findValueForId(id, "background-image"));
-		}else if(style.findValueForTag(tagName, "background-image")!=null){
-			applyBackgroundImage(description, style.findValueForTag(tagName, "background-image"));
+		String backgroundImage = style.findValue(id, tagName, "background-image");
+		if(backgroundImage!=null){
+			applyBackgroundImage(description, backgroundImage);
 		}
 
 	}

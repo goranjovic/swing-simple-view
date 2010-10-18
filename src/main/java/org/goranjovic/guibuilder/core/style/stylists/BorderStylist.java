@@ -41,31 +41,27 @@ public class BorderStylist implements Stylist {
 			String id = description.getId();
 			String tagName = description.getTagName();
 			String borderColorString = "black";
-			if (style.findValueForId(id, "border-color") != null) {
-				borderColorString = style.findValueForId(id, "border-color");
-			} else if (style.findValueForTag(tagName, "border-color") != null) {
-				borderColorString = style.findValueForTag(tagName,
-						"border-color");
+			
+			String borderColorFromStyle = style.findValue(id, tagName, "border-color");
+			if(borderColorFromStyle != null){
+				borderColorString = borderColorFromStyle;
 			}
 			Color borderColor = colorParser.parseColor(borderColorString);
+			
 			int borderWidth = 3;
-			if (style.findValueForId(id, "border-width") != null) {
-				borderWidth = parseBorderWidth(style.findValueForId(id, "border-width") );
-			} else if (style.findValueForTag(tagName, "border-width") != null) {
-				borderWidth = parseBorderWidth(style.findValueForTag(tagName,
-						"border-width"));
-			}
+			
+			String borderWidthString = style.findValue(id, tagName, "border-width");
+			if (borderWidthString != null) {
+				borderWidth = parseBorderWidth(borderWidthString);
+			} 
 			
 			
 			if(borderWidth == -1) borderWidth = 3;
 			
-			if (style.findValueForId(id, "border-style") != null) {
-				applyBorderStyle(component, style.findValueForId(id,
-						"border-style"), borderColor, borderWidth);
-			} else if (style.findValueForTag(tagName, "border-style") != null) {
-				applyBorderStyle(component, style.findValueForTag(tagName,
-						"border-style"), borderColor, borderWidth);
-			}
+			String borderStyle = style.findValue(id, tagName, "border-style");
+			if (borderStyle != null) {
+				applyBorderStyle(component, borderStyle, borderColor, borderWidth);
+			} 
 		}
 
 	}

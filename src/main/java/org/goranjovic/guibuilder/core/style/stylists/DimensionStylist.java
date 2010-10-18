@@ -22,7 +22,6 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 
-import org.goranjovic.css.dom.SelectorType;
 import org.goranjovic.css.dom.StyleSheet;
 import org.goranjovic.guibuilder.core.ElementDescription;
 
@@ -32,13 +31,12 @@ public class DimensionStylist implements Stylist {
 
 	@Override
 	public void applyStyle(ElementDescription description, StyleSheet style) {
-		applyDimensions(description, style, SelectorType.TAG);
-		applyDimensions(description, style, SelectorType.ID);
+		applyDimensions(description, style);
 	}
 
 
 
-	private void applyDimensions(ElementDescription description, StyleSheet style, SelectorType selectorType) {
+	private void applyDimensions(ElementDescription description, StyleSheet style) {
 		
 		String widthString;
 		String heightString;
@@ -49,15 +47,16 @@ public class DimensionStylist implements Stylist {
 				
 		
 		Component component = description.getComponent();
-		String identifier = description.getIdentifier(selectorType);
+		String id = description.getId();
+		String tagName = description.getTagName();
 		
 		
-			widthString=style.findValue(identifier, "width", selectorType);
-			heightString=style.findValue(identifier, "height", selectorType);
-			maxWidthString=style.findValue(identifier, "max-width", selectorType);
-			minWidthString=style.findValue(identifier, "min-width", selectorType);
-			maxHeightString=style.findValue(identifier, "max-height", selectorType);
-			minHeightString=style.findValue(identifier, "min-height", selectorType);
+		widthString=style.findValue(id, tagName, "width");
+		heightString=style.findValue(id, tagName, "height");
+		maxWidthString=style.findValue(id, tagName, "max-width");
+		minWidthString=style.findValue(id, tagName, "min-width");
+		maxHeightString=style.findValue(id, tagName, "max-height");
+		minHeightString=style.findValue(id, tagName, "min-height");
 		
 		
 		int parentWidth;

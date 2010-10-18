@@ -48,22 +48,19 @@ public class TextStylist implements Stylist {
 			String id = description.getId();
 			String tagName = description.getTagName();
 			
-			if(style.findValueForId(id, "color")!=null){
-				applyColor(component, style.findValueForId(id, "color"));
-			}else if(style.findValueForTag(tagName, "color")!=null){
-				applyColor(component, style.findValueForTag(tagName, "color"));
+			String color = style.findValue(id, tagName, "color");
+			if(color!=null){
+				applyColor(component, color);
 			}
 			
-			if(style.findValueForId(id, "text-align")!=null){
-				applyTextAlign(component, style.findValueForId(id, "text-align"));
-			}else if(style.findValueForTag(tagName, "text-align")!=null){
-				applyTextAlign(component, style.findValueForTag(tagName, "text-align"));
+			String textAlign = style.findValue(id, tagName, "text-align");
+			if(textAlign!=null){
+				applyTextAlign(component, textAlign);
 			}
 			
-			if(style.findValueForId(id, "text-transform")!=null){
-				applyTextTransform(component, style.findValueForId(id, "text-transform"), tagName);
-			}else if(style.findValueForTag(tagName, "text-transform")!=null){
-				applyTextTransform(component, style.findValueForTag(tagName, "text-transform"), tagName);
+			String textTransform = style.findValue(id, tagName, "text-transform");
+			if(textTransform!=null){
+				applyTextTransform(component, textTransform, tagName);
 			}
 		}
 

@@ -36,46 +36,39 @@ public class FontStylist implements Stylist {
 		String id = description.getId();
 		String tagName = description.getTagName();
 		
-		if(style.findValueForId(id, "font-family")!=null){
-			applyFontFamily(component, style.findValueForId(id, "font-family"));
-		}else if(style.findValueForTag(tagName, "font-family")!=null){
-			applyFontFamily(component, style.findValueForTag(tagName, "font-family"));
+		String fontFamily = style.findValue(id, tagName, "font-family");
+		if(fontFamily!=null){
+			applyFontFamily(component, fontFamily);
 		}
 		
-		if(style.findValueForId(id, "font-size")!=null){
-			applyFontSize(description, style.findValueForId(id, "font-size"));
-		}else if(style.findValueForTag(tagName, "font-size")!=null){
-			applyFontSize(description, style.findValueForTag(tagName, "font-size"));
+		String fontSize = style.findValue(id, tagName, "font-size");
+		if(fontSize!=null){
+			applyFontSize(description, fontSize);
 		}
 		
-		if(style.findValueForId(id, "font-style")!=null){
-			applyFontStyle(component, style.findValueForId(id, "font-style"));
-		}else if(style.findValueForTag(tagName, "font-style")!=null){
-			applyFontStyle(component, style.findValueForTag(tagName, "font-style"));
+		String fontStyle = style.findValue(id, tagName, "font-style");
+		if(fontStyle!=null){
+			applyFontStyle(component, fontStyle);
 		}
 		
-		if(style.findValueForId(id, "font-weight")!=null){
-			applyFontWeight(component, style.findValueForId(id, "font-weight"));
-		}else if(style.findValueForTag(tagName, "font-weight")!=null){
-			applyFontWeight(component, style.findValueForTag(tagName, "font-weight"));
+		String fontWeight = style.findValue(id, tagName, "font-weight");
+		if(fontWeight!=null){
+			applyFontWeight(component, fontWeight);
 		}
 		
-		if(style.findValueForId(id, "text-decoration")!=null){
-			applyTextDecoration(component, style.findValueForId(id, "text-decoration"));
-		}else if(style.findValueForTag(tagName, "text-decoration")!=null){
-			applyTextDecoration(component, style.findValueForTag(tagName, "text-decoration"));
+		String textDecoration = style.findValue(id, tagName, "text-decoration");
+		if(textDecoration!=null){
+			applyTextDecoration(component, textDecoration);
 		}
 		
-		if(style.findValueForId(id, "direction")!=null){
-			applyDirection(component, style.findValueForId(id, "direction"));
-		}else if(style.findValueForTag(tagName, "direction")!=null){
-			applyDirection(component, style.findValueForTag(tagName, "direction"));
+		String direction = style.findValue(id, tagName, "direction");
+		if(direction!=null){
+			applyDirection(component, direction);
 		}
 		
-		if(style.findValueForId(id, "font-stretch")!=null){
-			applyFontStretch(component, style.findValueForId(id, "font-stretch"));
-		}else if(style.findValueForTag(tagName, "font-stretch")!=null){
-			applyFontStretch(component, style.findValueForTag(tagName, "font-stretch"));
+		String fontStretch = style.findValue(id, tagName, "font-stretch");
+		if(fontStretch!=null){
+			applyFontStretch(component, fontStretch);
 		}
 	}
 	
