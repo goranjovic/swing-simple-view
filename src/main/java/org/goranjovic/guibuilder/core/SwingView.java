@@ -32,6 +32,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.goranjovic.css.dom.StyleSheet;
 import org.goranjovic.css.parser.Parser;
+import org.goranjovic.guibuilder.components.support.ResizeListener;
 import org.goranjovic.guibuilder.core.factory.FormFactory;
 import org.goranjovic.guibuilder.core.localizer.Localizer;
 import org.goranjovic.guibuilder.core.style.ElementStyleManager;

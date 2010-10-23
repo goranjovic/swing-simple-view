@@ -16,10 +16,12 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the Lesser GNU General Public License
 along with swing-simple-view.  If not, see <http://www.gnu.org/licenses/>.*/
 
-package org.goranjovic.guibuilder.core;
+package org.goranjovic.guibuilder.components.support;
 
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
+
+import org.goranjovic.guibuilder.core.SwingView;
 
 public class ResizeListener extends Thread implements ComponentListener {
 	
