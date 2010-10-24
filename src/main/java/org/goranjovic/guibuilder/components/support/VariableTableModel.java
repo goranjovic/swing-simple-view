@@ -18,8 +18,10 @@ along with swing-simple-view.  If not, see <http://www.gnu.org/licenses/>.*/
 
 package org.goranjovic.guibuilder.components.support;
 
+import java.beans.PropertyChangeSupport;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.Vector;
 
 import javax.swing.JTable;
@@ -36,8 +38,26 @@ public class VariableTableModel extends DefaultTableModel {
 	private List<STableColumn> columns = new ArrayList<STableColumn>();
 	private JTable table;
 	
+	private PropertyChangeSupport pcs;
+
+    public PropertyChangeSupport retrievePropertyChangeSupport() {
+		return pcs;
+	}
+    
+    private Set<String> boundColumns;
+
+	
 	public VariableTableModel(JTable table){
 		this.table = table;
+		pcs = new PropertyChangeSupport(table);
+	}
+
+	public Set<String> getBoundColumns() {
+		return boundColumns;
+	}
+
+	public void setBoundColumns(Set<String> boundColumns) {
+		this.boundColumns = boundColumns;
 	}
 
 	@Override
@@ -60,10 +80,17 @@ public class VariableTableModel extends DefaultTableModel {
     
     @Override
     public void setValueAt(Object value, int row, int column) {
+    	Object oldValue =rows.get(row).get(column);
     	rows.get(row).set(column, value);
+    	
+    	String columnName = getColumns().get(column).getName();
+    	if(getBoundColumns().contains(columnName)){
+			String propertyName = row + "," + columnName;
+	    	pcs.firePropertyChange(propertyName, oldValue, value);
+    	}
     }
 
-    public List<List<Object>> getRows() {
+	public List<List<Object>> getRows() {
 		return rows;
 	}
 
