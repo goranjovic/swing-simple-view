@@ -80,14 +80,23 @@ public class VariableTableModel extends DefaultTableModel {
     
     @Override
     public void setValueAt(Object value, int row, int column) {
-    	Object oldValue =rows.get(row).get(column);
-    	rows.get(row).set(column, value);
     	
-    	String columnName = getColumns().get(column).getName();
-    	if(getBoundColumns().contains(columnName)){
-			String propertyName = row + "," + columnName;
-	    	pcs.firePropertyChange(propertyName, oldValue, value);
+    	if(row > 0){
+    	
+	    	Object oldValue =rows.get(row).get(column);
+	    	rows.get(row).set(column, value);
+	    	
+	    	String columnName = getColumns().get(column).getName();
+	    	if(getBoundColumns().contains(columnName)){
+				String propertyName = row + "," + columnName;
+		    	pcs.firePropertyChange(propertyName, oldValue, value);
     	}
+    	
+    	}
+    }
+    
+    public void setValueAt(Object value, int row, String columnName){
+    	setValueAt(value, row, getColumnIndex(columnName));
     }
 
 	public List<List<Object>> getRows() {
@@ -96,6 +105,15 @@ public class VariableTableModel extends DefaultTableModel {
 
 	public List<STableColumn> getColumns() {
 		return columns;
+	}
+	
+	private int getColumnIndex(String columnName){
+		for(STableColumn column : columns){
+			if(column.getName().equals(columnName)){
+				return columns.indexOf(column);
+			}
+		}
+		return -1;
 	}
 
 	@Override
