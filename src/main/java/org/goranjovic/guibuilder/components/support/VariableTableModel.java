@@ -81,7 +81,7 @@ public class VariableTableModel extends DefaultTableModel {
     @Override
     public void setValueAt(Object value, int row, int column) {
     	
-    	if(row > 0){
+    	if(row >= 0){
     	
 	    	Object oldValue =rows.get(row).get(column);
 	    	rows.get(row).set(column, value);
@@ -125,6 +125,17 @@ public class VariableTableModel extends DefaultTableModel {
 	public void addRow(List<Object> row){
 		rows.add(row);
 		fireTableDataChanged();
+	}
+	
+	public void addEmptyRows(int howMany){
+		int columnCount = getColumnCount();
+		for(int i = 0; i < howMany; i++){
+			List<Object> emptyRow = new ArrayList<Object>(columnCount);
+			for(int j = 0; j < columnCount; j++){
+				emptyRow.add("");
+			}
+			addRow(emptyRow);
+		}
 	}
 	
 	
